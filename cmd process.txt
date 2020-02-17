@@ -1,0 +1,237 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\prabu>cd F:\python\DjangoProject
+
+C:\Users\prabu>f:
+
+F:\python\DjangoProject>django admin startproject Inventory_Management
+'django' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\python\DjangoProject>django-admin startproject Inventory_Management
+
+F:\python\DjangoProject>cd Inventory_management
+
+F:\python\DjangoProject\Inventory_Management>python manage.py Inventory
+Unknown command: 'Inventory'
+Type 'manage.py help' for usage.
+
+F:\python\DjangoProject\Inventory_Management>python manage.py  startapp Inventor
+y
+
+F:\python\DjangoProject\Inventory_Management>python manage.py makemigrations
+Migrations for 'Inventory':
+  Inventory\migrations\0001_initial.py
+    - Create model Device
+    - Create model Desktop
+    - Create model Laptop
+    - Create model Mobile
+
+F:\python\DjangoProject\Inventory_Management>python manage.py makemigrations
+Migrations for 'Inventory':
+  Inventory\migrations\0001_initial.py
+    - Create model Desktop
+    - Create model Laptop
+    - Create model Mobile
+
+F:\python\DjangoProject\Inventory_Management>python manage.py migrate
+Operations to perform:
+  Apply all migrations: Inventory, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying Inventory.0001_initial... OK
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+
+F:\python\DjangoProject\Inventory_Management>python manage.py makemigrations
+No changes detected
+
+F:\python\DjangoProject\Inventory_Management>python manage.py migrate
+Operations to perform:
+  Apply all migrations: Inventory, admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+
+F:\python\DjangoProject\Inventory_Management>python manage.py makemigrations
+Migrations for 'Inventory':
+  Inventory\migrations\0002_auto_20200214_0709.py
+    - Alter field status on desktop
+    - Alter field status on laptop
+    - Alter field status on mobile
+
+F:\python\DjangoProject\Inventory_Management>python manage.py migrate
+Operations to perform:
+  Apply all migrations: Inventory, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying Inventory.0002_auto_20200214_0709... OK
+
+F:\python\DjangoProject\Inventory_Management>python manage.py createsuperuser
+Username (leave blank to use 'prabu'): ims
+Email address:
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+F:\python\DjangoProject\Inventory_Management>pip install django-import-export
+Collecting django-import-export
+  Downloading https://files.pythonhosted.org/packages/ac/ab/dc240689d94099ce61df
+5b46b1ae3c1f24717cf1f19d34ac7425a6ff3aa7/django_import_export-2.0.1-py3-none-any
+.whl (82kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 92kB 542kB/s
+Collecting tablib<1.0.0 (from django-import-export)
+  Downloading https://files.pythonhosted.org/packages/7f/8d/665f895e4355f1ee9566
+5e003b994512c8b670148a921aa9acec9d1607fb/tablib-0.14.0-py3-none-any.whl (65kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 71kB 1.1MB/s
+Requirement already satisfied: Django>=2.0 in c:\users\prabu\appdata\local\progr
+ams\python\python37-32\lib\site-packages (from django-import-export) (3.0.2)
+Collecting diff-match-patch (from django-import-export)
+  Downloading https://files.pythonhosted.org/packages/f0/2a/5ba07def0e9107d935ab
+a62cf632afbd0f7c723a98af47ccbcab753d2452/diff-match-patch-20181111.tar.gz (58kB)
+
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 61kB 1.1MB/s
+Collecting pyyaml (from tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/93/2f/0fe99d8809276f7e0414
+c451284a5f144e2a332cbe2379e8bbc7421a7ec9/PyYAML-5.3-cp37-cp37m-win32.whl (195kB)
+
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 204kB 1.1MB/s
+Collecting markuppy (from tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/4e/ca/f43541b41bd17fc945cf
+ae7ea44f1661dc21ea65ecc944a6fa138eead94c/MarkupPy-1.14.tar.gz
+Collecting openpyxl>=2.4.0 (from tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/95/8c/83563c60489954e5b80f
+9e2596b93a68e1ac4e4a730deb1aae632066d704/openpyxl-3.0.3.tar.gz (172kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 174kB 581kB/s
+Collecting odfpy (from tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/97/73/8ade73f6749177003f7c
+e3304f524774adda96e6aaab30ea79fd8fda7934/odfpy-1.4.1.tar.gz (717kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 727kB 1.6MB/s
+Collecting xlwt (from tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753
+603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl (99kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 102kB 706kB/s
+Collecting xlrd (from tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/b0/16/63576a1a001752e34bf8
+ea62e367997530dc553b689356b9879339cf45a4/xlrd-1.2.0-py2.py3-none-any.whl (103kB)
+
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 112kB 898kB/s
+Requirement already satisfied: asgiref~=3.2 in c:\users\prabu\appdata\local\prog
+rams\python\python37-32\lib\site-packages (from Django>=2.0->django-import-expor
+t) (3.2.3)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\prabu\appdata\local\p
+rograms\python\python37-32\lib\site-packages (from Django>=2.0->django-import-ex
+port) (0.3.0)
+Requirement already satisfied: pytz in c:\users\prabu\appdata\local\programs\pyt
+hon\python37-32\lib\site-packages (from Django>=2.0->django-import-export) (2019
+.3)
+Collecting jdcal (from openpyxl>=2.4.0->tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/f0/da/572cbc0bc582390480bb
+d7c4e93d14dc46079778ed915b505dc494b37c57/jdcal-1.4.1-py2.py3-none-any.whl
+Collecting et_xmlfile (from openpyxl>=2.4.0->tablib<1.0.0->django-import-export)
+
+  Downloading https://files.pythonhosted.org/packages/22/28/a99c42aea746e18382ad
+9fb36f64c1c1f04216f41797f2f0fa567da11388/et_xmlfile-1.0.1.tar.gz
+Collecting defusedxml (from odfpy->tablib<1.0.0->django-import-export)
+  Downloading https://files.pythonhosted.org/packages/06/74/9b387472866358ebc087
+32de3da6dc48e44b0aacd2ddaa5cb85ab7e986a2/defusedxml-0.6.0-py2.py3-none-any.whl
+Installing collected packages: pyyaml, markuppy, jdcal, et-xmlfile, openpyxl, de
+fusedxml, odfpy, xlwt, xlrd, tablib, diff-match-patch, django-import-export
+  Running setup.py install for markuppy ... done
+  Running setup.py install for et-xmlfile ... done
+  Running setup.py install for openpyxl ... done
+  Running setup.py install for odfpy ... done
+  Running setup.py install for diff-match-patch ... done
+Successfully installed defusedxml-0.6.0 diff-match-patch-20181111 django-import-
+export-2.0.1 et-xmlfile-1.0.1 jdcal-1.4.1 markuppy-1.14 odfpy-1.4.1 openpyxl-3.0
+.3 pyyaml-5.3 tablib-0.14.0 xlrd-1.2.0 xlwt-1.3.0
+You are using pip version 19.0.3, however version 20.0.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' comm
+and.
+
+F:\python\DjangoProject\Inventory_Management>python manage.py runserver 198.45.2
+3.1:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (2_0.W001) Your URL pattern 'delete_desktop/(?P<pk>\d+)' [name='delete_deskto
+p'] has a route that contains '(?P<', begins with a '^', or ends with a '$'. Thi
+s was likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'delete_laptop/(?P<pk>\d+)' [name='delete_laptop'
+] has a route that contains '(?P<', begins with a '^', or ends with a '$'. This
+was likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'delete_mobile/(?P<pk>\d+)' [name='delete_mobile'
+] has a route that contains '(?P<', begins with a '^', or ends with a '$'. This
+was likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'edit_desktop/(?P<pk>\d+)' [name='edit_desktop']
+has a route that contains '(?P<', begins with a '^', or ends with a '$'. This wa
+s likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'edit_laptop/(?P<pk>\d+)' [name='edit_laptop'] ha
+s a route that contains '(?P<', begins with a '^', or ends with a '$'. This was
+likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'edit_mobile/(?P<pk>\d+)' [name='edit_mobile'] ha
+s a route that contains '(?P<', begins with a '^', or ends with a '$'. This was
+likely an oversight when migrating to django.urls.path().
+
+System check identified 6 issues (0 silenced).
+February 14, 2020 - 11:29:41
+Django version 3.0.2, using settings 'Inventory_Management.settings'
+Starting development server at http://198.45.23.1:8000/
+Quit the server with CTRL-BREAK.
+Error: That IP address can't be assigned to.
+
+F:\python\DjangoProject\Inventory_Management>python manage.py runserver 198.45.2
+3.1:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (2_0.W001) Your URL pattern 'delete_desktop/(?P<pk>\d+)' [name='delete_deskto
+p'] has a route that contains '(?P<', begins with a '^', or ends with a '$'. Thi
+s was likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'delete_laptop/(?P<pk>\d+)' [name='delete_laptop'
+] has a route that contains '(?P<', begins with a '^', or ends with a '$'. This
+was likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'delete_mobile/(?P<pk>\d+)' [name='delete_mobile'
+] has a route that contains '(?P<', begins with a '^', or ends with a '$'. This
+was likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'edit_desktop/(?P<pk>\d+)' [name='edit_desktop']
+has a route that contains '(?P<', begins with a '^', or ends with a '$'. This wa
+s likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'edit_laptop/(?P<pk>\d+)' [name='edit_laptop'] ha
+s a route that contains '(?P<', begins with a '^', or ends with a '$'. This was
+likely an oversight when migrating to django.urls.path().
+?: (2_0.W001) Your URL pattern 'edit_mobile/(?P<pk>\d+)' [name='edit_mobile'] ha
+s a route that contains '(?P<', begins with a '^', or ends with a '$'. This was
+likely an oversight when migrating to django.urls.path().
+
+System check identified 6 issues (0 silenced).
+February 14, 2020 - 11:31:27
+Django version 3.0.2, using settings 'Inventory_Management.settings'
+Starting development server at http://198.45.23.1:8000/
+Quit the server with CTRL-BREAK.
+Error: That IP address can't be assigned to.
+
+F:\python\DjangoProject\Inventory_Management>
